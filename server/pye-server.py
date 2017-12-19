@@ -37,8 +37,8 @@ def simple_reply(msg):
 	    		if msg['Content'] == 'ls':
 	    			output = output.replace('\n', '\t')
         except Exception,e:
-			itchat.send(u'error ,%s , %s' % (repr(e),output), msg['FromUserName'])
+			itchat.send(u'.error ,%s , %s' % (repr(e),output), msg['FromUserName'])
 			return ""
-        itchat.send(u'. %s' % (output), msg['FromUserName'])
+        itchat.send(u'.%s' % (output), msg['FromUserName'])
 itchat.auto_login(enableCmdQR=0, hotReload=True)
 itchat.run()
