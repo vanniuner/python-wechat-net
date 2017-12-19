@@ -18,3 +18,7 @@ a nat-ddns base on python &amp; wechart
 ### 客户端链接
 ### python pye-client.py
 ### 使用微信B扫码
+
+![Image text](https://github.com/vanniuner/python-wechat-net/blob/master/image/shell.gif)
+
+![Image text](https://github.com/vanniuner/python-wechat-net/blob/master/image/shell1.gif)
