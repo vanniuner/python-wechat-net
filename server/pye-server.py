@@ -9,7 +9,7 @@ import time
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
-pattern = re.compile(r'(vim|top|vi|ps|su|sh|tail).*')
+pattern = re.compile(r'(vim|top|vi|ps -ef|su|sh|tail -f).*')
 
 @itchat.msg_register([itchat.content.TEXT])
 def simple_reply(msg):
