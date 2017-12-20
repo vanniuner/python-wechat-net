@@ -18,7 +18,7 @@ def simple_reply(msg):
         print msg['Content'][1:]
     commandstr = raw_input("[root@raspberry]$ ")
     if commandstr=='exit':
-        os._exit(0)
+        itchat.logout()
     else:
         author.send(commandstr)
 
