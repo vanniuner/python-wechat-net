@@ -29,6 +29,7 @@ def simple_reply(msg):
 	    		output=os.getcwd()
 	    	elif msg['Content']=='hand':
 	    		status=0
+			commands.getstatusoutput('cd /root')
 	    		output='welcome '+msg['FromUserName']
 	    	else:
 	    		print str(commands.getstatusoutput('date')[1])
