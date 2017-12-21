@@ -40,5 +40,6 @@ def simple_reply(msg):
 			itchat.send(u'.error ,%s , %s' % (repr(e),output), msg['FromUserName'])
 			return ""
         itchat.send(u'.%s' % (output), msg['FromUserName'])
+time.sleep(10)
 itchat.auto_login(enableCmdQR=1, hotReload=True)
 itchat.run()
