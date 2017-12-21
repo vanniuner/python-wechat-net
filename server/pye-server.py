@@ -41,6 +41,6 @@ def simple_reply(msg):
 			return ""
         itchat.send(u'.%s' % (output), msg['FromUserName'])
 time.sleep(10)
-os.chdir('/root')
 itchat.auto_login(enableCmdQR=1, hotReload=True)
+os.chdir('/root')
 itchat.run()
