@@ -29,7 +29,6 @@ def simple_reply(msg):
 	    		output=os.getcwd()
 	    	elif msg['Content']=='hand':
 	    		status=0
-			commands.getstatusoutput('cd /root')
 	    		output='welcome '+msg['FromUserName']
 	    	else:
 	    		print str(commands.getstatusoutput('date')[1])
@@ -42,6 +41,6 @@ def simple_reply(msg):
 			return ""
         itchat.send(u'.%s' % (output), msg['FromUserName'])
 time.sleep(10)
-commands.getstatusoutput('cd /root')
+os.chdir('/root')
 itchat.auto_login(enableCmdQR=1, hotReload=True)
 itchat.run()
