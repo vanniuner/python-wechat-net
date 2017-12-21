@@ -1,3 +1,4 @@
 *.pkl
 QR.png
 .DS_Store
+*/nohup.out
