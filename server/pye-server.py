@@ -9,7 +9,7 @@ import time
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
-pattern = re.compile(r'(vim|top|vi|ps -ef|su|sh|tail -f|ssh-keygen).*')
+pattern = re.compile(r'(vim|top|vi|su|sh|tail -f|ssh-keygen).*')
 
 @itchat.msg_register([itchat.content.TEXT])
 def simple_reply(msg):
