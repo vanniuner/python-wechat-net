@@ -9,7 +9,7 @@ import time
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
-pattern = re.compile(r'(vim|top|vi|ps -ef|su|sh|tail -f).*')
+pattern = re.compile(r'(vim|top|vi|ps -ef|su|sh|tail -f|ssh-keygen).*')
 
 @itchat.msg_register([itchat.content.TEXT])
 def simple_reply(msg):
@@ -39,6 +39,8 @@ def simple_reply(msg):
         except Exception,e:
 			itchat.send(u'.error ,%s , %s' % (repr(e),output), msg['FromUserName'])
 			return ""
+	if output.len() > 16000:
+		output = u'response unreachable!'
         itchat.send(u'.%s' % (output), msg['FromUserName'])
 time.sleep(10)
 itchat.auto_login(enableCmdQR=1, hotReload=True)
